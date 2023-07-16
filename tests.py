@@ -16,7 +16,7 @@ class SimpleGeneratorTestCase(unittest.TestCase):
 # json with no "message" key returns empty schema
 # invalid json throws error
 # invalid file throws error
-# can must provide only one of file path, json_string, and json_object
+# can must provide only one of file_path, json_string, and json_object
 
 
 class SimpleTestSuite(unittest.TestSuite):
