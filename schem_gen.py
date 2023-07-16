@@ -4,6 +4,7 @@ import pathlib
 from abc import abstractmethod
 from genson import SchemaBuilder
 
+from config import BASE_DIR
 
 
 class InvalidParameterError(Exception):
@@ -37,7 +38,7 @@ class JSONSchemaGenerator:
         self._json_object = json_object or (json_string and json.loads(json_string))
         self._json_string = json_string
         self._schema = None
-        self._BASE_DIR = pathlib.PurePath(__file__).parent
+        self._BASE_DIR = BASE_DIR
 
         if self._file_path is not None:
             with open(self._file_path, "rb") as file:
@@ -82,13 +83,15 @@ class GensonSchemaGenerator(JSONSchemaGenerator):
                 if k != "message":
                     json_obj.pop(k)
 
-        json_obj = json_obj.get("message", dict())
-
-        self._builder.add_object(json_obj)
-        self._schema = self._builder.to_schema()
-        self._update_meta(self._schema)
-        self._compress_type_meta(self._schema)
-        self._restructure_meta(self._schema)
+        json_obj = json_obj.get("message", None)
+        if json_obj is None:
+            self._schema = dict()
+        else:
+            self._builder.add_object(json_obj)
+            self._schema = self._builder.to_schema()
+            self._update_meta(self._schema)
+            self._compress_type_meta(self._schema)
+            self._restructure_meta(self._schema)
     
     def _update_value(self, v):
         if isinstance(v, dict) and v.get("type", False):

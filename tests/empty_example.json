@@ -1,0 +1,8 @@
+{
+    "attributes": {
+        "appName": "ABCDEFG",
+        "eventType": "ABCDEFGHIJ",
+        "subEventType": "ABCDEFGHIJKLMNOPQRSTU",
+        "sensitive": true
+    }
+}
