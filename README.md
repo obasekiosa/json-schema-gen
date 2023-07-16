@@ -19,6 +19,13 @@ To use run
 python main.py <path to file>
 ```
 
+## Testing
+This project makes use of the unittests library for testing  
+To run the tests run
+```sh
+python tests.py
+```
+
 
 ## Author
 [Osakpolor T. Obaseki](obasekiosa.github.io)
