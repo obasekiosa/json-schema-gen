@@ -1,0 +1,39 @@
+{
+    "attributes": {
+        "appName": "ABCDEFG",
+        "eventType": "ABCDEFGHIJ",
+        "subEventType": "ABCDEFGHIJKLMNOPQRSTU",
+        "sensitive": true
+    },
+    "message": {
+        "key_str": "abc",
+        "key_int": 1,
+        "key_enum": [
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZA",
+            "ABCDEFGHIJKLMNOPQ",
+            "ABCDEFGHIJKLMNOPQRSTUVW",
+            "ABCDEFGHIJKLMNOPQRSTUVWXY",
+            "ABCDEFGHIJK",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "ABCDEFGHIJKLMNOPQR",
+            "ABCDEFG",
+            "ABCDEFGHIJKLM"
+        ],
+        "key_array": [
+            {
+                "user": {
+                    "id": "ABCDEFGHIJKLMN",
+                    "nickname": "ABCDEFGHIJKLMN",
+                    "title": "ABCDEFGHIJK",
+                    "accountType": "ABCDEFGHIJKLMNOPQRSTUVWX",
+                    "countryCode": "ABCDEFGH",
+                    "orientation": "ABCDEFGHIJKLMNOPQRSTUVWXY"
+                },
+                "creator": false,
+                "ranking": 498,
+                "numberOfTrades": 862,
+                "performance": "ABCDEFGHIJKLMNOPQRSTUVW"
+            }
+        ]
+    }
+}
